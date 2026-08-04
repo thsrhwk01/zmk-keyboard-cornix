@@ -249,7 +249,7 @@
         conf_layer {
             display-name = "Config";
             bindings = <
-&long_bt_clr 0 0  &trans  &trans        &trans        &trans        &trans                       &trans  &trans  &trans  &trans  &trans  &studio_unlock
+&long_bt_clr 0 0  &trans  &trans        &trans        &trans        &bootloader                  &bootloader  &trans  &trans  &trans  &trans  &studio_unlock
 &trans            &trans  &bt BT_SEL 3  &bt BT_SEL 4  &out OUT_TOG  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
 &none             &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &tog_conf2 8 0  &none  &trans  &trans  &trans  &trans  &trans  &trans
 &none             &none   &none         &trans        &trans        &trans                       &trans  &trans  &trans  &none   &none   &none

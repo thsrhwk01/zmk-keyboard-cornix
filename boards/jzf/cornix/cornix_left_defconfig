@@ -43,9 +43,6 @@ CONFIG_BT_PERIPHERAL_PREF_LATENCY=0
 
 # Prefer the more robust 1M PHY for direct-to-host BLE connections.
 CONFIG_ZMK_BLE_EXPERIMENTAL_CONN=y
-
-# Allow short keyboard and mouse HID report bursts without exhausting BLE TX buffers.
-CONFIG_BT_BUF_ACL_TX_COUNT=6
 # 更改键盘默认显示名称
 
 # 电池电量报告间隔时间单位是秒
