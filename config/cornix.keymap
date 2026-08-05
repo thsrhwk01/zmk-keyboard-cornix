@@ -140,6 +140,7 @@
         };
 
         /* Cornix uses its stock indicator implementation, not Corne underglow. */
+
         macro_rgb_tog: macro_rgb_tog {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -153,10 +154,10 @@
         windows_layer {
             display-name = "Windows";
             bindings = <
-&kp ESCAPE                    &kp Q                &kp W                &kp E                    &kp R                  &kp T                       &kp Y           &kp U                  &kp I                    &kp O                &kp P                        &kp BSPC
-&caps_fn CAPSLOCK LANGUAGE_1  &homerow LEFT_GUI A  &homerow LEFT_ALT S  &homerow LEFT_CONTROL D  &homerow LEFT_SHIFT F  &kp G                       &kp H           &homerow LEFT_SHIFT J  &homerow LEFT_CONTROL K  &homerow LEFT_ALT L  &homerow LEFT_GUI SEMICOLON  &kp SQT
-&kp LSHIFT                    &kp Z                &kp X                &kp C                    &kp V                  &kp B  &tog_conf 8 C_MUTE  &none  &kp N           &kp M                  &kp COMMA                &kp DOT              &kp FSLH                     &kp LSHIFT
-&none                         &none                &none                &thumb 4 ESCAPE          &thumb 5 SPACE          &thumb 6 TAB                 &thumb 5 ENTER   &thumb 6 SPACE         &thumb 4 DELETE           &none                &none                        &none
+&kp ESCAPE                    &kp Q                &kp W                &kp E                    &kp R                  &kp T                                    &kp Y           &kp U                  &kp I                    &kp O                &kp P                        &kp BSPC
+&caps_fn CAPSLOCK LANGUAGE_1  &homerow LEFT_GUI A  &homerow LEFT_ALT S  &homerow LEFT_CONTROL D  &homerow LEFT_SHIFT F  &kp G                                    &kp H           &homerow LEFT_SHIFT J  &homerow LEFT_CONTROL K  &homerow LEFT_ALT L  &homerow LEFT_GUI SEMICOLON  &kp SQT
+&kp LSHIFT                    &kp Z                &kp X                &kp C                    &kp V                  &kp B         &tog_conf 8 C_MUTE  &none  &kp N           &kp M                  &kp COMMA                &kp DOT              &kp FSLH                     &kp LSHIFT
+&none                         &none                &none                &thumb 4 ESCAPE          &thumb 5 SPACE         &thumb 6 TAB                             &thumb 5 ENTER  &thumb 6 SPACE         &thumb 4 DELETE          &none                &none                        &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp PG_UP PG_DN>;
@@ -165,10 +166,10 @@
         macos_layer {
             display-name = "macOS";
             bindings = <
-&kp ESCAPE                    &kp Q                    &kp W                &kp E                &kp R                  &kp T                       &kp Y           &kp U                   &kp I                 &kp O                 &kp P                             &kp BSPC
-&caps_fn CAPSLOCK LANGUAGE_1  &homerow LEFT_CONTROL A  &homerow LEFT_ALT S  &homerow LEFT_GUI D  &homerow LEFT_SHIFT F  &kp G                       &kp H           &homerow RIGHT_SHIFT J  &homerow RIGHT_GUI K  &homerow RIGHT_ALT L  &homerow RIGHT_CONTROL SEMICOLON  &kp SQT
-&kp LSHIFT                    &kp Z                    &kp X                &kp C                &kp V                  &kp B  &tog_conf 8 C_MUTE  &none  &kp N           &kp M                   &kp COMMA             &kp DOT               &kp FSLH                          &kp LSHIFT
-&none                         &none                    &none                &thumb 7 ESCAPE      &thumb 5 SPACE          &thumb 6 TAB                 &thumb 5 ENTER   &thumb 6 SPACE          &thumb 7 DEL          &none                 &none                              &none
+&kp ESCAPE                    &kp Q                    &kp W                &kp E                &kp R                  &kp T                                    &kp Y           &kp U                   &kp I                 &kp O                 &kp P                             &kp BSPC
+&caps_fn CAPSLOCK LANGUAGE_1  &homerow LEFT_CONTROL A  &homerow LEFT_ALT S  &homerow LEFT_GUI D  &homerow LEFT_SHIFT F  &kp G                                    &kp H           &homerow RIGHT_SHIFT J  &homerow RIGHT_GUI K  &homerow RIGHT_ALT L  &homerow RIGHT_CONTROL SEMICOLON  &kp SQT
+&kp LSHIFT                    &kp Z                    &kp X                &kp C                &kp V                  &kp B         &tog_conf 8 C_MUTE  &none  &kp N           &kp M                   &kp COMMA             &kp DOT               &kp FSLH                          &kp LSHIFT
+&none                         &none                    &none                &thumb 7 ESCAPE      &thumb 5 SPACE         &thumb 6 TAB                             &thumb 5 ENTER  &thumb 6 SPACE          &thumb 7 DEL          &none                 &none                             &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp PG_UP PG_DN>;
@@ -177,10 +178,10 @@
         gaming_layer {
             display-name = "Game";
             bindings = <
-&kp ESCAPE  &kp Q      &kp W      &kp E      &kp R      &kp T                   &kp Y           &kp U           &kp I            &kp O    &kp P          &kp BSPC
-&kp TAB     &kp A      &kp S      &kp D      &kp F      &kp G                   &kp H           &kp J           &kp K            &kp L    &kp SEMICOLON  &kp SQT
-&kp LSHIFT  &kp Z      &kp X      &kp C      &kp V      &kp B  &kp C_MUTE  &none  &kp N           &kp M           &kp COMMA        &kp DOT  &kp FSLH       &kp LSHIFT
-&kp LCTRL   &kp LGUI   &kp LALT   &kp LCTRL  &kp SPACE  &kp LALT                &thumb 5 ENTER  &thumb 6 SPACE  &thumb 4 DELETE  &none   &none           &none
+&kp ESCAPE  &kp Q     &kp W     &kp E      &kp R      &kp T                                &kp Y           &kp U           &kp I            &kp O    &kp P          &kp BSPC
+&kp TAB     &kp A     &kp S     &kp D      &kp F      &kp G                                &kp H           &kp J           &kp K            &kp L    &kp SEMICOLON  &kp SQT
+&kp LSHIFT  &kp Z     &kp X     &kp C      &kp V      &kp B     &tog_conf 8 C_MUTE  &none  &kp N           &kp M           &kp COMMA        &kp DOT  &kp FSLH       &kp LSHIFT
+&kp LCTRL   &kp LGUI  &kp LALT  &kp LCTRL  &kp SPACE  &kp LALT                             &thumb 5 ENTER  &thumb 6 SPACE  &thumb 4 DELETE  &none    &none          &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp PG_UP PG_DN>;
@@ -189,10 +190,10 @@
         gaming_layer2 {
             display-name = "Game+Arr";
             bindings = <
-&kp ESCAPE  &kp Q      &kp W      &kp E      &kp R      &kp T                   &kp Y           &kp U           &kp UP           &kp O      &kp P          &kp BSPC
-&kp TAB     &kp A      &kp S      &kp D      &kp F      &kp G                   &kp H           &kp LEFT        &kp DOWN         &kp RIGHT  &kp SEMICOLON  &kp SQT
-&kp LSHIFT  &kp Z      &kp X      &kp C      &kp V      &kp B  &kp C_MUTE  &none  &kp N           &kp M           &kp COMMA        &kp DOT    &kp FSLH       &kp LSHIFT
-&kp LCTRL   &kp LGUI   &kp LALT   &kp LCTRL  &kp SPACE  &kp LALT                &thumb 5 ENTER  &thumb 6 SPACE  &thumb 4 DELETE  &none     &none           &none
+&kp ESCAPE  &kp Q     &kp W     &kp E      &kp R      &kp T                                &kp Y           &kp U           &kp UP           &kp O      &kp P          &kp BSPC
+&kp TAB     &kp A     &kp S     &kp D      &kp F      &kp G                                &kp H           &kp LEFT        &kp DOWN         &kp RIGHT  &kp SEMICOLON  &kp SQT
+&kp LSHIFT  &kp Z     &kp X     &kp C      &kp V      &kp B     &tog_conf 8 C_MUTE  &none  &kp N           &kp M           &kp COMMA        &kp DOT    &kp FSLH       &kp LSHIFT
+&kp LCTRL   &kp LGUI  &kp LALT  &kp LCTRL  &kp SPACE  &kp LALT                             &thumb 5 ENTER  &thumb 6 SPACE  &thumb 4 DELETE  &none      &none          &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp PG_UP PG_DN>;
@@ -201,10 +202,10 @@
         fn_ms_layer {
             display-name = "Fn+Mouse";
             bindings = <
-&trans  &kp F10                &kp F7                &kp F8                    &kp F9                  &trans                    &mkp MB5        &msc SCRL_UP    &mmv MOVE_UP    &trans           &trans           &trans
-&trans  &homerow LEFT_GUI F11  &homerow LEFT_ALT F4  &homerow LEFT_CONTROL F5  &homerow LEFT_SHIFT F6  &trans                    &msc SCRL_LEFT  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_RIGHT  &trans
+&trans  &kp F10                &kp F7                &kp F8                    &kp F9                  &trans                   &mkp MB5        &msc SCRL_UP    &mmv MOVE_UP    &trans           &trans           &trans
+&trans  &homerow LEFT_GUI F11  &homerow LEFT_ALT F4  &homerow LEFT_CONTROL F5  &homerow LEFT_SHIFT F6  &trans                   &msc SCRL_LEFT  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_RIGHT  &trans
 &trans  &kp F12                &kp F1                &kp F2                    &kp F3                  &trans  &kp C_PP  &none  &mkp MB4        &msc SCRL_DOWN  &kp C_PREV      &kp C_NEXT       &kp C_PP         &trans
-&none   &none                  &none                  &trans                    &trans                  &trans                    &mkp MB1        &mkp MB2        &mkp MB3        &none            &none            &none
+&none   &none                  &none                 &trans                    &trans                  &trans                   &mkp MB1        &mkp MB2        &mkp MB3        &none            &none            &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC &inc_dec_kp PG_UP PG_DN>;
@@ -213,10 +214,10 @@
         arrow_layer {
             display-name = "Arrow";
             bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans                    &kp PG_UP  &kp PG_UP  &kp UP    &trans     &trans   &trans
-&trans  &trans  &trans  &trans  &trans    &trans                    &kp HOME   &kp LEFT   &kp DOWN  &kp RIGHT  &kp END  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &kp C_PP  &none  &kp PG_DN  &kp PG_DN  &trans    &trans     &trans   &trans
-&none   &none   &none   &trans  &trans    &trans                    &trans     &trans     &trans    &none      &none    &none
+&trans  &trans  &trans  &trans  &trans  &trans                   &kp PG_UP  &kp PG_UP  &kp UP    &trans     &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans                   &kp HOME   &kp LEFT   &kp DOWN  &kp RIGHT  &kp END  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &kp C_PP  &none  &kp PG_DN  &kp PG_DN  &trans    &trans     &trans   &trans
+&none   &none   &none   &trans  &trans  &trans                   &trans     &trans     &trans    &none      &none    &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_NEXT C_PREV &inc_dec_kp PG_UP PG_DN>;
@@ -225,10 +226,10 @@
         num_layer {
             display-name = "Number";
             bindings = <
-&kp GRAVE  &kp LBKT  &kp N7  &kp N8                  &kp N9                   &kp N0                       &trans     &trans     &trans  &trans  &trans  &trans
-&trans     &kp RBKT  &kp N4  &kp N5                  &kp N6                   &kp MINUS                    &trans     &kp ENTER  &trans  &trans  &trans  &trans
-&trans     &kp BSLH  &kp N1  &kp N2                  &kp N3                   &kp EQUAL  &kp C_PP  &none  &trans     &trans     &trans  &trans  &trans  &trans
-&none      &none     &none   &kp N0  &space_period DOT SPACE  &trans                       &trans     &trans     &trans  &none   &none   &none
+&kp GRAVE  &kp LBKT  &kp N7  &kp N8  &kp N9                   &kp N0                      &trans  &trans     &trans  &trans  &trans  &trans
+&trans     &kp RBKT  &kp N4  &kp N5  &kp N6                   &kp MINUS                   &trans  &kp ENTER  &trans  &trans  &trans  &trans
+&trans     &kp BSLH  &kp N1  &kp N2  &kp N3                   &kp EQUAL  &kp C_PP  &none  &trans  &trans     &trans  &trans  &trans  &trans
+&none      &none     &none   &kp N0  &space_period DOT SPACE  &trans                      &trans  &trans     &trans  &none   &none   &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_NEXT C_PREV &inc_dec_kp PG_UP PG_DN>;
@@ -237,10 +238,10 @@
         fn_ms_mac_layer {
             display-name = "Fn+Mouse";
             bindings = <
-&trans  &kp F10                    &kp F7                &kp F8                &kp F9                  &trans                    &mkp MB5        &msc SCRL_UP    &mmv MOVE_UP    &trans           &trans           &trans
-&trans  &homerow LEFT_CONTROL F11  &homerow LEFT_ALT F4  &homerow LEFT_GUI F5  &homerow LEFT_SHIFT F6  &trans                    &msc SCRL_LEFT  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_RIGHT  &trans
+&trans  &kp F10                    &kp F7                &kp F8                &kp F9                  &trans                   &mkp MB5        &msc SCRL_UP    &mmv MOVE_UP    &trans           &trans           &trans
+&trans  &homerow LEFT_CONTROL F11  &homerow LEFT_ALT F4  &homerow LEFT_GUI F5  &homerow LEFT_SHIFT F6  &trans                   &msc SCRL_LEFT  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_RIGHT  &trans
 &trans  &kp F12                    &kp F1                &kp F2                &kp F3                  &trans  &kp C_PP  &none  &mkp MB4        &msc SCRL_DOWN  &kp C_PREV      &kp C_NEXT       &kp C_PP         &trans
-&none   &none                      &none                  &trans                &trans                  &trans                    &mkp MB1        &mkp MB2        &mkp MB3        &none            &none            &none
+&none   &none                      &none                 &trans                &trans                  &trans                   &mkp MB1        &mkp MB2        &mkp MB3        &none            &none            &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_INC C_BRIGHTNESS_DEC &inc_dec_kp PG_UP PG_DN>;
@@ -249,10 +250,10 @@
         conf_layer {
             display-name = "Config";
             bindings = <
-&long_bt_clr 0 0  &trans  &trans        &trans        &trans        &bootloader                  &bootloader  &trans  &trans  &trans  &trans  &studio_unlock
-&trans            &trans  &bt BT_SEL 3  &bt BT_SEL 4  &out OUT_TOG  &trans                       &trans  &to 0   &to 1   &to 2   &to 3   &trans
-&none             &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &tog_conf2 8 0  &none  &trans  &trans  &trans  &trans  &trans  &trans
-&none             &none   &none         &trans        &trans        &trans                       &trans  &trans  &trans  &none   &none   &none
+&long_bt_clr 0 0  &trans  &trans        &trans        &trans        &bootloader                         &bootloader  &trans  &trans  &trans  &trans  &studio_unlock
+&trans            &trans  &bt BT_SEL 3  &bt BT_SEL 4  &out OUT_TOG  &trans                              &trans       &to 0   &to 1   &to 2   &to 3   &trans
+&none             &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans       &tog_conf2 8 0  &none  &trans       &trans  &trans  &trans  &trans  &trans
+&none             &none   &none         &trans        &trans        &trans                              &trans       &trans  &trans  &none   &none   &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp PG_UP PG_DN>;
