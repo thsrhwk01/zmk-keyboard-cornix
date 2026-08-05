@@ -133,7 +133,7 @@ layers:
   - C
   - V
   - B
-  - $$mdi:volume-off$$
+  - {t: '$$mdi:volume-off$$', h: Config}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - N
   - M
@@ -184,7 +184,7 @@ layers:
   - C
   - V
   - B
-  - $$mdi:volume-off$$
+  - {t: '$$mdi:volume-off$$', h: Config}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - N
   - M
