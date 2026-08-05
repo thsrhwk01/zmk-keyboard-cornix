@@ -42,12 +42,12 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:keyboard-esc$$', h: Fn+Mouse}
+  - {t: '$$mdi:keyboard-esc$$', h: Fn+Mouse-Win}
   - {t: '$$mdi:keyboard-space$$', h: Arrow}
   - {t: '$$mdi:keyboard-tab$$', h: Number}
   - {t: '$$mdi:keyboard-return$$', h: Arrow}
   - {t: '$$mdi:keyboard-space$$', h: Number}
-  - {t: '$$mdi:backspace-reverse-outline$$', h: Fn+Mouse}
+  - {t: '$$mdi:backspace-reverse-outline$$', h: Fn+Mouse-Win}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -93,12 +93,12 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:keyboard-esc$$', h: Fn+Mouse}
+  - {t: '$$mdi:keyboard-esc$$', h: Fn+Mouse-macOS}
   - {t: '$$mdi:keyboard-space$$', h: Arrow}
   - {t: '$$mdi:keyboard-tab$$', h: Number}
   - {t: '$$mdi:keyboard-return$$', h: Arrow}
   - {t: '$$mdi:keyboard-space$$', h: Number}
-  - {t: '$$mdi:backspace-reverse-outline$$', h: Fn+Mouse}
+  - {t: '$$mdi:backspace-reverse-outline$$', h: Fn+Mouse-macOS}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -149,7 +149,7 @@ layers:
   - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:keyboard-return$$', h: Arrow}
   - {t: '$$mdi:keyboard-space$$', h: Number}
-  - {t: '$$mdi:backspace-reverse-outline$$', h: Fn+Mouse}
+  - {t: '$$mdi:backspace-reverse-outline$$', h: Fn+Mouse-Win}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -200,11 +200,11 @@ layers:
   - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:keyboard-return$$', h: Arrow}
   - {t: '$$mdi:keyboard-space$$', h: Number}
-  - {t: '$$mdi:backspace-reverse-outline$$', h: Fn+Mouse}
+  - {t: '$$mdi:backspace-reverse-outline$$', h: Fn+Mouse-Win}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  Fn+Mouse:
+  Fn+Mouse-Win:
   - {t: '$$mdi:transfer$$', type: trans}
   - F10
   - F7
@@ -218,9 +218,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: F11, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: F11, h: '$$mdi:apple-keyboard-command$$'}
   - {t: F4, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: F5, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: F5, h: '$$mdi:apple-keyboard-control$$'}
   - {t: F6, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:pan-left$$
@@ -354,6 +354,57 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  Fn+Mouse-macOS:
+  - {t: '$$mdi:transfer$$', type: trans}
+  - F10
+  - F7
+  - F8
+  - F9
+  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:arrow-right-bold$$
+  - $$mdi:pan-up$$
+  - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: F11, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: F4, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: F5, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: F6, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:pan-left$$
+  - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
+  - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
+  - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
+  - $$mdi:pan-right$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - F12
+  - F1
+  - F2
+  - F3
+  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:play-pause$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:arrow-left-bold$$
+  - $$mdi:pan-down$$
+  - $$mdi:skip-previous$$
+  - $$mdi:skip-next$$
+  - $$mdi:play-pause$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:mouse-left-click-outline$$
+  - $$mdi:mouse-right-click-outline$$
+  - $$mdi:mouse-scroll-wheel$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
