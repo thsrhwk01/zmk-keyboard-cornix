@@ -61,10 +61,10 @@ Cornix 분할 키보드를 위한 개인용 ZMK 펌웨어 저장소입니다. �
 | 1 | macOS | macOS용 기본 레이어와 Command/Option 배열 |
 | 2 | Game | 홀드-탭을 줄인 게임용 레이어 |
 | 3 | Game+Arr | 오른손에 방향키를 배치한 게임용 레이어 |
-| 4 | Fn+Mouse | Windows용 기능키, 마우스 이동·버튼·스크롤 |
+| 4 | Fn+Mouse-Win | Windows용 기능키, 마우스 이동·버튼·스크롤 |
 | 5 | Arrow | 방향키, 탐색 및 편집 기능 |
 | 6 | Number | 숫자와 기호 입력 |
-| 7 | Fn+Mouse | macOS용 기능키, 마우스 이동·버튼·스크롤 |
+| 7 | Fn+Mouse-macOS | macOS용 기능키, 마우스 이동·버튼·스크롤 |
 | 8 | Config | Bluetooth 프로필, 출력 전환, 레이어 선택, 부트로더 및 ZMK Studio |
 
 Config 레이어에서 `&to`를 사용해 0~3번 레이어를 선택하므로, 기존에 활성화된 상위 레이어가 남지 않고 선택한 레이어 하나로 전환됩니다.

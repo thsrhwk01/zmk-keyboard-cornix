@@ -18,6 +18,7 @@ jobs:
       contents: write
     with:
       keymap_patterns: "config/cornix.keymap"
+      parse_args: "cornix:'--layer-names Windows macOS Game Game+Arr Fn+Mouse-Win Arrow Number Fn+Mouse-macOS Config'"
       draw_args: "cornix:'-l LAYOUT_50'"
       commit_message: "docs: update Cornix keymap diagram"
       destination: "commit"

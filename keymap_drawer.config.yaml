@@ -185,7 +185,7 @@ parse_config:
       hold: $$mdi:apple-keyboard-command$$
     "&thumb 4 ESCAPE":
       tap: $$mdi:keyboard-esc$$
-      hold: Fn+Mouse
+      hold: Fn+Mouse-Win
     "&thumb 5 SPACE":
       tap: $$mdi:keyboard-space$$
       hold: Arrow
@@ -200,13 +200,13 @@ parse_config:
       hold: Number
     "&thumb 4 DELETE":
       tap: $$mdi:backspace-reverse-outline$$
-      hold: Fn+Mouse
+      hold: Fn+Mouse-Win
     "&thumb 7 ESCAPE":
       tap: $$mdi:keyboard-esc$$
-      hold: Fn+Mouse
+      hold: Fn+Mouse-macOS
     "&thumb 7 DEL":
       tap: $$mdi:backspace-reverse-outline$$
-      hold: Fn+Mouse
+      hold: Fn+Mouse-macOS
     "&tog_conf 8 C_MUTE":
       tap: $$mdi:volume-off$$
       hold: Config
