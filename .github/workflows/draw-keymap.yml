@@ -1,0 +1,24 @@
+name: Draw Cornix keymap
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - "**"
+    paths:
+      - "config/cornix.keymap"
+      - "config/cornix.json"
+      - ".github/workflows/draw-keymap.yml"
+      - "keymap_drawer.config.yaml"
+
+jobs:
+  draw:
+    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
+    permissions:
+      contents: write
+    with:
+      keymap_patterns: "config/cornix.keymap"
+      draw_args: "cornix:'-l LAYOUT_50'"
+      commit_message: "docs: update Cornix keymap diagram"
+      destination: "commit"
+      fail_on_error: true
