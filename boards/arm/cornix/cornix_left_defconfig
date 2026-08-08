@@ -74,7 +74,7 @@ CONFIG_ZMK_HID_REPORT_TYPE_NKRO=n
 
 CONFIG_ZMK_POINTING=y
 
-# 3 profiles (n+2)
+# 5 host profiles + 1 split peripheral
 CONFIG_BT_MAX_CONN=6
 CONFIG_BT_MAX_PAIRED=6
 
