@@ -76,6 +76,13 @@ config ZMK_SPLIT
 config ZMK_BLE
 	default y
 
+# Enter deep sleep after 30 minutes of inactivity.
+config ZMK_SLEEP
+    default y
+
+config ZMK_IDLE_SLEEP_TIMEOUT
+    default 1800000
+
 ## disable rgb by default
 config WS2812_STRIP
 	default n
