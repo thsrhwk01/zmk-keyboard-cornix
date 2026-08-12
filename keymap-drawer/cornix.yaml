@@ -42,9 +42,9 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:keyboard-esc$$', h: Fn+Mouse-Win}
+  - {t: '$$mdi:keyboard-esc$$', h: Number}
   - {t: '$$mdi:keyboard-space$$', h: Arrow}
-  - {t: '$$mdi:keyboard-tab$$', h: Number}
+  - {t: '$$mdi:keyboard-tab$$', h: Fn+Mouse-Win}
   - {t: '$$mdi:keyboard-return$$', h: Arrow}
   - {t: '$$mdi:keyboard-space$$', h: Number}
   - {t: '$$mdi:backspace-reverse-outline$$', h: Fn+Mouse-Win}
@@ -93,9 +93,9 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:keyboard-esc$$', h: Fn+Mouse-macOS}
+  - {t: '$$mdi:keyboard-esc$$', h: Number}
   - {t: '$$mdi:keyboard-space$$', h: Arrow}
-  - {t: '$$mdi:keyboard-tab$$', h: Number}
+  - {t: '$$mdi:keyboard-tab$$', h: Fn+Mouse-macOS}
   - {t: '$$mdi:keyboard-return$$', h: Arrow}
   - {t: '$$mdi:keyboard-space$$', h: Number}
   - {t: '$$mdi:backspace-reverse-outline$$', h: Fn+Mouse-macOS}
@@ -248,7 +248,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - $$mdi:mouse-left-click-outline$$
   - $$mdi:mouse-right-click-outline$$
   - $$mdi:mouse-scroll-wheel$$
@@ -348,7 +348,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '0', s: )}
+  - {t: '0', s: ), type: held}
   - {t: '$$mdi:keyboard-space$$', h: .}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -401,7 +401,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - $$mdi:mouse-left-click-outline$$
   - $$mdi:mouse-right-click-outline$$
   - $$mdi:mouse-scroll-wheel$$
