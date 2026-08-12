@@ -152,7 +152,7 @@
 &kp ESCAPE                    &kp Q                &kp W                &kp E                    &kp R                  &kp T                                    &kp Y           &kp U                  &kp I                    &kp O                &kp P                        &kp BSPC
 &caps_fn CAPSLOCK LANGUAGE_1  &homerow LEFT_GUI A  &homerow LEFT_ALT S  &homerow LEFT_CONTROL D  &homerow LEFT_SHIFT F  &kp G                                    &kp H           &homerow LEFT_SHIFT J  &homerow LEFT_CONTROL K  &homerow LEFT_ALT L  &homerow LEFT_GUI SEMICOLON  &kp SQT
 &kp LSHIFT                    &kp Z                &kp X                &kp C                    &kp V                  &kp B         &tog_conf 8 C_MUTE  &none  &kp N           &kp M                  &kp COMMA                &kp DOT              &kp FSLH                     &kp LSHIFT
-&none                         &none                &none                &thumb 4 ESCAPE          &thumb 5 SPACE         &thumb 6 TAB                             &thumb 5 ENTER  &thumb 6 SPACE         &thumb 4 DELETE          &none                &none                        &none
+&none                         &none                &none                &thumb 6 ESCAPE          &thumb 5 SPACE         &thumb 4 TAB                             &thumb 5 ENTER  &thumb 6 SPACE         &thumb 4 DELETE          &none                &none                        &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp PG_UP PG_DN>;
@@ -164,7 +164,7 @@
 &kp ESCAPE                    &kp Q                    &kp W                &kp E                &kp R                  &kp T                                    &kp Y           &kp U                   &kp I                 &kp O                 &kp P                             &kp BSPC
 &caps_fn CAPSLOCK LANGUAGE_1  &homerow LEFT_CONTROL A  &homerow LEFT_ALT S  &homerow LEFT_GUI D  &homerow LEFT_SHIFT F  &kp G                                    &kp H           &homerow RIGHT_SHIFT J  &homerow RIGHT_GUI K  &homerow RIGHT_ALT L  &homerow RIGHT_CONTROL SEMICOLON  &kp SQT
 &kp LSHIFT                    &kp Z                    &kp X                &kp C                &kp V                  &kp B         &tog_conf 8 C_MUTE  &none  &kp N           &kp M                   &kp COMMA             &kp DOT               &kp FSLH                          &kp LSHIFT
-&none                         &none                    &none                &thumb 7 ESCAPE      &thumb 5 SPACE         &thumb 6 TAB                             &thumb 5 ENTER  &thumb 6 SPACE          &thumb 7 DEL          &none                 &none                             &none
+&none                         &none                    &none                &thumb 6 ESCAPE      &thumb 5 SPACE         &thumb 7 TAB                             &thumb 5 ENTER  &thumb 6 SPACE          &thumb 7 DEL          &none                 &none                             &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN &inc_dec_kp PG_UP PG_DN>;
