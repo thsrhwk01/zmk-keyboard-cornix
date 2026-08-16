@@ -112,7 +112,7 @@ CONFIG_SETTINGS_NVS=y
 
 ### RGB 상태 표시
 
-`cornix_indicator` shield는 각 반쪽의 RGB LED로 배터리 및 split 연결 상태를 표시합니다. 기본 Release에서는 비활성화되어 있습니다. 활성화하려면 `config/west.yml`에서 `zmk-rgbled-widget` 모듈을 활성화하고 해당 board 항목에 `cornix_indicator` shield를 추가해야 합니다.
+`cornix_indicator` shield는 각 반쪽의 RGB LED로 배터리 및 split 연결 상태를 표시합니다. 기본 Release의 `cornix_left_default_nosd`, `cornix_left_for_dongle_nosd`, `cornix_right_nosd` 펌웨어에서 활성화되어 있습니다. 동글 및 설정 초기화 펌웨어에는 포함되지 않습니다.
 
 LED가 유휴 상태가 되면 WS2812 외부 전원을 1초 뒤 차단하지만, 실제로 점등된 LED는 추가 전력을 소비합니다.
 

@@ -18,7 +18,7 @@
 
 - **`cornix_dongle_adapter`**: 동글 구성에 필요한 키 매트릭스 및 Bluetooth 공통 기능을 제공합니다. Cornix를 사용자 지정 동글과 함께 사용할 때 필요한 실드입니다.
 - **`cornix_dongle_eyelash`**: 동글 보드용 디스플레이 장치를 설정하는 예제 실드입니다. 보드의 장치 트리에 `zephyr,display`가 아직 정의되어 있지 않을 때 사용합니다.
-- **`cornix_indicator`**: 배터리 상태와 연결 상태를 표시하는 RGB LED 인디케이터를 활성화하는 실드입니다. 이 실드를 사용하면 전력 소비가 증가합니다.
+- **`cornix_indicator`**: 각 측면의 RGB LED 2개로 배터리 상태와 연결 상태를 표시하는 실드입니다. 기본 좌측·동글용 좌측·우측 빌드에서 활성화되어 있으며, 점등 중에는 전력 소비가 증가합니다.
 
 ---
 
@@ -46,16 +46,14 @@
 - [x] no-SD 이미지(v2.3부터)
 - [x] 다양한 동글 지원
 - [x] Zephyr 4.1 및 LVGL 9으로 업그레이드(v2.7부터, 아직 동글 화면 미지원)
-- [ ] 향후 v3에서 RGB 지원
+- [x] v3부터 RGB 배터리 및 연결 상태 표시 지원
 
 
 ### RGB 소개
 
-Cornix 실드는 각 측면에 2개씩 RGB LED가 있으며, 기본 펌웨어에서는 PWM으로 제어됩니다.
+Cornix에는 각 측면에 RGB LED가 2개씩 있습니다. 이 저장소의 기본 좌측·동글용 좌측·우측 빌드는 `cornix_indicator` 실드와 `zmk-rgbled-widget`을 사용하여 배터리 및 분할 연결 상태를 표시합니다.
 
-대체 방안은 RGB 인디케이터 모듈을 조정하여 이 RGB LED를 켜고, RGB LED로 배터리 상태와 연결 상태를 표시하는 기본 펌웨어와 동일한 효과를 구현하는 것입니다.
-
-하지만 이 저장소에서는 아직 지원되지 않습니다. PR을 환영합니다!
+표시가 끝나고 LED가 유휴 상태가 되면 WS2812 외부 전원을 1초 뒤 차단하여 대기 전력 소비를 줄입니다. 실제로 점등된 LED는 추가 전력을 소비합니다.
 
 ## 지원 하드웨어: Cornix 분할 키보드
 
@@ -207,7 +205,7 @@ west update
 > [!NOTE]
 > 1. 동글 없이 (기본) Cornix를 사용하는 경우 `cornix_left`, `cornix_right`, `reset`을 선택하세요.
 > 2. 동글과 함께 Cornix를 사용하는 경우 `cornix_dongle`, `cornix_left_for_dongle`, `cornix_right`, `reset`을 선택하세요.
-> 3. RGB LED를 활성화하려면 `cornix_indicator` 실드를 추가하세요. 전력 소비가 훨씬 커지므로 이 점을 고려하여 사용하세요.
+> 3. 이 저장소의 기본 빌드에는 `cornix_indicator` 실드가 이미 추가되어 있습니다. RGB LED를 사용하지 않으려면 각 board 항목에서 실드를 제거하세요.
 
 ```yaml
 include:
@@ -218,16 +216,16 @@ include:
     artifact-name: cornix_dongle
 
   - board: cornix_ph_left
-    # shield: cornix_indicator
+    shield: cornix_indicator
     artifact-name: cornix_left_for_dongle
 
   # Use cornix without dongle
   - board: cornix_left
-    # shield: cornix_indicator
+    shield: cornix_indicator
     artifact-name: cornix_left
 
   - board: cornix_right
-    # shield: cornix_indicator
+    shield: cornix_indicator
     artifact-name: cornix_right
 
   - board: cornix_right

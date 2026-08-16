@@ -58,7 +58,7 @@
           </div>
           <div class="hero-visual">
             <img src="../assets/cornix_with_dongle.png" alt="Cornix 分体键盘及其 USB dongle">
-            <div class="hero-note">RGB 指示功能已可正式使用，但仍属可选项；默认发布的 UF2 并未启用 RGB。</div>
+            <div class="hero-note">默认的左侧、dongle peripheral 左侧与右侧 UF2 均已启用 RGB 状态指示。</div>
           </div>
         </div>
         <div class="shell facts" aria-label="Cornix 主要特性">
@@ -160,7 +160,7 @@
             <div class="notice-icon" aria-hidden="true">!</div>
             <div>
               <strong>v3.0.0 预编译包使用仓库默认构建矩阵。</strong>
-              <p>其中包含标准分体、dongle 与 reset 角色所需的六个 UF2，但未启用 <code>cornix_indicator</code>。如需 RGB，请自行构建。</p>
+              <p>其中包含标准分体、dongle 与 reset 角色所需的六个 UF2。三个键盘半侧固件均启用 <code>cornix_indicator</code>，dongle 与 reset 固件则不包含此功能。</p>
             </div>
           </div>
 
@@ -214,7 +214,7 @@
     shield: settings_reset
     snippet: nrf52840-nosd
     artifact-name: cornix_reset</code></pre>
-                <p>如需 RGB，请在 manifest 加入 <code>zmk-rgbled-widget</code>，并在需要驱动 LED 的半侧设置 <code>shield: cornix_indicator</code>。此功能须主动启用，不在默认发布包内。</p>
+                <p>默认 manifest 已包含 <code>zmk-rgbled-widget</code>，各键盘半侧 build 也设置了 <code>shield: cornix_indicator</code>。如需关闭 RGB，可从对应 board 条目移除该 shield。</p>
               </article>
 
               <article class="guide-panel" id="flash-order">

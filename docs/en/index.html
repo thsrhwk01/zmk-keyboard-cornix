@@ -58,7 +58,7 @@
           </div>
           <div class="hero-visual">
             <img src="../assets/cornix_with_dongle.png" alt="Cornix split keyboard beside a small USB dongle">
-            <div class="hero-note">The RGB indicators are production-ready and optional. The default release UF2 files keep them disabled.</div>
+            <div class="hero-note">The default left, dongle-peripheral left, and right UF2 files enable the RGB status indicators.</div>
           </div>
         </div>
         <div class="shell facts" aria-label="Cornix quick facts">
@@ -163,7 +163,7 @@
             <div class="notice-icon" aria-hidden="true">!</div>
             <div>
               <strong>The prebuilt v3.0.0 package uses the default matrix.</strong>
-              <p>It includes six UF2 files for the standard split, dongle, and reset roles, but does not enable <code>cornix_indicator</code>. Build your own firmware to opt into RGB.</p>
+              <p>It includes six UF2 files for the standard split, dongle, and reset roles. <code>cornix_indicator</code> is enabled in the three keyboard-half images and omitted from the dongle and reset images.</p>
             </div>
           </div>
 
@@ -217,7 +217,7 @@
     shield: settings_reset
     snippet: nrf52840-nosd
     artifact-name: cornix_reset</code></pre>
-                <p>For RGB, add <code>zmk-rgbled-widget</code> to the manifest and set <code>shield: cornix_indicator</code> on the half being built. This is an opt-in, not part of the default release package.</p>
+                <p>The default manifest includes <code>zmk-rgbled-widget</code>, and each keyboard-half build sets <code>shield: cornix_indicator</code>. Remove the shield from a board entry to build that half without RGB indicators.</p>
               </article>
 
               <article class="guide-panel" id="flash-order">
