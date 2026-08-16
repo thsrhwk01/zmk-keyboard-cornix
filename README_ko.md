@@ -347,12 +347,8 @@ projects:
 
 3. **펌웨어를 빌드**합니다.
    ```bash
-<<<<<<< HEAD
-   west build -b cornix_main_left
-=======
-   west build -b cornix_left
->>>>>>> 16dcccb (migrate to zephyr4 , disable dongle screen)
-   west build -b cornix_right
+   west build -b cornix_left//zmk
+   west build -b cornix_right//zmk
    ```
 
 이 방법을 사용하면 기존 ZMK 설정의 `west.yaml` 파일을 수정하지 않고도 Cornix 실드를 사용할 수 있습니다.

@@ -1,14 +1,7 @@
-# Electronut Labs Papyr board configuration
+# cornix board configuration
 
 # Copyright (c) 2020 The ZMK Contributors
 # SPDX-License-Identifier: MIT
-
-if BOARD_CORNIX
-
-config BOARD
-    default "cornix"
-
-endif # BOARD_CORNIX
 
 ## Main device (left side)
 if BOARD_CORNIX_LEFT
@@ -48,24 +41,14 @@ config ZMK_SPLIT_ROLE_CENTRAL
 config ZMK_SPLIT_BLE_ROLE_CENTRAL
 	default n
 
-endif # BOARD_CORNIX_RIGHT || BOARD_CORNIX_PH_LEFT
-
-if BOARD_CORNIX_LEFT || BOARD_CORNIX_RIGHT || BOARD_CORNIX_PH_LEFT
-
-# Add keyboard debouncing
-config ZMK_KSCAN_DEBOUNCE_PRESS_MS
-    default 3
-config ZMK_KSCAN_DEBOUNCE_RELEASE_MS
-    default 3
-
-endif # BOARD_CORNIX_LEFT || BOARD_CORNIX_RIGHT || BOARD_CORNIX_PH_LEFT
+endif # BOARD_CORNIX_RIGHT
 
 # Common options for both sides
 if BOARD_CORNIX_LEFT  || BOARD_CORNIX_PH_LEFT || BOARD_CORNIX_RIGHT
 
 
-config BT_CTLR
-    default BT
+#config BT_CTLR
+#    default BT
 
 config BOARD_CORNIX_CHARGER
     default y
@@ -76,6 +59,13 @@ config ZMK_SPLIT
 config ZMK_BLE
 	default y
 
+# Use the same debounce values on both halves.
+config ZMK_KSCAN_DEBOUNCE_PRESS_MS
+    default 3
+
+config ZMK_KSCAN_DEBOUNCE_RELEASE_MS
+    default 3
+
 # Enter deep sleep after 30 minutes of inactivity.
 config ZMK_SLEEP
     default y
@@ -84,13 +74,11 @@ config ZMK_IDLE_SLEEP_TIMEOUT
     default 1800000
 
 ## disable rgb by default
-config WS2812_STRIP
-	default n
 config ZMK_RGB_UNDERGLOW
 	default n
 config ZMK_RGB_UNDERGLOW_EXT_POWER
 	default n
     
 
-endif # BOARD_CORNIX_LEFT || BOARD_CORNIX_RIGHT
+endif # BOARD_CORNIX_LEFT || BOARD_CORNIX_PH_LEFT || BOARD_CORNIX_RIGHT
 # vim: set ft=kconfig:
