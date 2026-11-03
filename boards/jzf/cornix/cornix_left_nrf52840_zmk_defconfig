@@ -35,10 +35,11 @@ CONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
 # 增加键盘的 BLE 无线电的发射功率，用解决延迟和左右通讯不佳的问题
 CONFIG_BT_CTLR_TX_PWR_PLUS_8=y
 
-# Use a 7.5 ms direct-host BLE interval with zero peripheral latency.
+# Direct-host BLE: allow 7.5-15 ms interval and peripheral latency 30 (ZMK defaults).
+# A fixed 7.5 ms / latency 0 link caused intermittent drops on Windows hosts.
 CONFIG_BT_PERIPHERAL_PREF_MIN_INT=6
-CONFIG_BT_PERIPHERAL_PREF_MAX_INT=6
-CONFIG_BT_PERIPHERAL_PREF_LATENCY=0
+CONFIG_BT_PERIPHERAL_PREF_MAX_INT=12
+CONFIG_BT_PERIPHERAL_PREF_LATENCY=30
 
 # Prefer the more robust 1M PHY for direct-to-host BLE connections.
 CONFIG_ZMK_BLE_EXPERIMENTAL_CONN=y
@@ -79,3 +80,7 @@ CONFIG_ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_FETCHING=y
 CONFIG_ZMK_STUDIO=y
 CONFIG_ZMK_STUDIO_LOCKING=n
 CONFIG_ZMK_STUDIO_LOCK_ON_DISCONNECT=n
+
+# Deep sleep after 30 minutes idle. Set here because ZMK's own default
+# (15 min) takes precedence over the board Kconfig.defconfig default.
+CONFIG_ZMK_IDLE_SLEEP_TIMEOUT=1800000

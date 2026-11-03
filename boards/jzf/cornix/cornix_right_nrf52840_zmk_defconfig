@@ -43,3 +43,7 @@ CONFIG_EC11=y
 CONFIG_EC11_TRIGGER_GLOBAL_THREAD=y
 
 # vim: set ft=kconfig:
+
+# Deep sleep after 30 minutes idle. Set here because ZMK's own default
+# (15 min) takes precedence over the board Kconfig.defconfig default.
+CONFIG_ZMK_IDLE_SLEEP_TIMEOUT=1800000

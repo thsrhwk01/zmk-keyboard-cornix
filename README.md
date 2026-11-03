@@ -11,7 +11,7 @@ Cornix 분할 키보드를 위한 개인용 ZMK 펌웨어 저장소입니다. �
 
 - 왼쪽을 central, 오른쪽을 peripheral로 사용하는 무선 분할 구성
 - 왼쪽과 오른쪽 모두 nRF52840 최대 송신 출력인 `+8 dBm` 적용
-- PC 직접 연결 시 7.5ms BLE 연결 간격, latency 0 및 안정적인 1M PHY 사용
+- PC 직접 연결 시 7.5–15ms BLE 연결 간격, latency 30 및 안정적인 1M PHY 사용
 - 좌우 공통 3ms 디바운스와 30분 미사용 후 Deep Sleep
 - 키보드에서 마우스 이동, 스크롤 및 버튼 입력 지원
 - 좌우 EC11 인코더 지원
