@@ -30,6 +30,13 @@ include:
     shield: cornix_indicator
     artifact-name: cornix_left_default_nosd
 
+  # Test only: USB log output with BLE connection/SMP/ATT debug logs.
+  - board: cornix_left//zmk
+    shield: cornix_indicator
+    snippet: zmk-usb-logging
+    cmake-args: -DCONFIG_BT_CONN_LOG_LEVEL_DBG=y -DCONFIG_BT_SMP_LOG_LEVEL_DBG=y -DCONFIG_BT_ATT_LOG_LEVEL_DBG=y -DCONFIG_LOG_BUFFER_SIZE=16384
+    artifact-name: cornix_left_usb_logging
+
   - board: cornix_ph_left//zmk
     shield: cornix_indicator
     artifact-name: cornix_left_for_dongle_nosd
