@@ -30,11 +30,12 @@ include:
     shield: cornix_indicator
     artifact-name: cornix_left_default_nosd
 
-  # Test only: USB log output with BLE connection/SMP/ATT debug logs.
+  # Test only: USB log output with BLE connection/SMP debug logs.
+  # Fast advertising is left out to match the main firmware.
   - board: cornix_left//zmk
     shield: cornix_indicator
     snippet: zmk-usb-logging
-    cmake-args: -DCONFIG_BT_CONN_LOG_LEVEL_DBG=y -DCONFIG_BT_SMP_LOG_LEVEL_DBG=y -DCONFIG_BT_ATT_LOG_LEVEL_DBG=y -DCONFIG_LOG_BUFFER_SIZE=16384
+    cmake-args: -DCORNIX_FAST_ADV=OFF -DCONFIG_BT_CONN_LOG_LEVEL_DBG=y -DCONFIG_BT_SMP_LOG_LEVEL_DBG=y -DCONFIG_LOG_BUFFER_SIZE=8192 -DCONFIG_BT_RX_STACK_SIZE=4096 -DCONFIG_SYSTEM_WORKQUEUE_STACK_SIZE=4096 -DCONFIG_RESET_ON_FATAL_ERROR=y
     artifact-name: cornix_left_usb_logging
 
   - board: cornix_ph_left//zmk
