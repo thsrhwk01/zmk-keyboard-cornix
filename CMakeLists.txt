@@ -2,3 +2,9 @@ if((CONFIG_BOARD_CORNIX_LEFT OR CONFIG_BOARD_CORNIX_RIGHT OR CONFIG_BOARD_CORNIX
    AND CONFIG_ZMK_BLE AND CONFIG_ZMK_SLEEP)
   target_sources(app PRIVATE src/cornix_sleep_disconnect.c)
 endif()
+
+# Host-facing left half: faster advertising right after it starts.
+if(CONFIG_BOARD_CORNIX_LEFT AND CONFIG_ZMK_BLE)
+  target_sources(app PRIVATE src/cornix_fast_adv.c)
+  zephyr_ld_options(-Wl,--wrap=bt_le_adv_start -Wl,--wrap=bt_le_adv_stop)
+endif()
