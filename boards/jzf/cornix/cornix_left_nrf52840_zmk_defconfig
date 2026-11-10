@@ -48,7 +48,12 @@ CONFIG_ZMK_BLE_EXPERIMENTAL_CONN=y
 # It can collide with the host starting encryption; a Realtek/Windows host
 # then stalls both procedures until the 40 s LL response timeout (0x22).
 CONFIG_BT_CTLR_PER_INIT_FEAT_XCHG=n
-# Do not negotiate LE Data Length. When both sides start it at connection# setup, the Realtek/Windows host's encryption and LE ping requests then go# unanswered until the 40 s LL response timeout (0x22). HID reports fit in# the default 27-byte PDU.CONFIG_BT_DATA_LEN_UPDATE=n
+
+# Do not negotiate LE Data Length. When both sides start it at connection
+# setup, the Realtek/Windows host's encryption and LE ping requests then go
+# unanswered until the 40 s LL response timeout (0x22). HID reports fit in
+# the default 27-byte PDU.
+CONFIG_BT_DATA_LEN_UPDATE=n
 # 更改键盘默认显示名称
 
 # 电池电量报告间隔时间单位是秒
